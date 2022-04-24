@@ -17,8 +17,12 @@
                     <th scope="col">Hoşgeldiniz <?php echo $user['first_name']; ?>!</th>
                     <th scope="col">İsim: </b><?php echo $user['first_name'] . ' ' . $user['last_name']; ?></th>
                     <th scope="col">E-mail: </b><?php echo $user['email']; ?></th>
-                    <th scope="col "><button class="btn btn-danger" a href="<?php echo base_url('users/logout'); ?>" class="logout">Çıkış</button></th>
-                </tr>
+                    <th scope=col>
+                        <form action="/Codeigniter/users/login" method="post">
+                            <button class="btn btn-danger" type="submit">Çıkış</button>
+                        </form><br>
+                    </th>
+                    
             </thead>
         </table>
     </div>

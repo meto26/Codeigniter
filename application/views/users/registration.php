@@ -16,6 +16,15 @@
             echo '<p class="status-msg error">'.$error_msg.'</p>'; 
         } 
     ?>    
+
+    <style>       
+        input[type=submit] {
+                       
+            background: none;
+            border: 0;
+        }
+    </style>
+	
     <div class="regisFrm mt-5">
         <form action="" method="post" style="max-width:300px;margin:auto">
             <div class="form-group">

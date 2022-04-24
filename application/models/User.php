@@ -2,14 +2,11 @@
  
 class User extends CI_Model{ 
     function __construct() { 
-        // Set table name 
+       
         $this->table = 'users'; 
     } 
      
-    /* 
-     * Fetch user data from the database 
-     * @param array filter data based on the passed parameters 
-     */ 
+   
     function getRows($params = array()){ 
         $this->db->select('*'); 
         $this->db->from($this->table); 

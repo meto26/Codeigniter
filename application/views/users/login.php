@@ -17,9 +17,14 @@
         } 
     ?>
     <style>
-        input[type="email"]{
+        input[type=email]{
             border-bottom-left-radius:5px ;
             border-bottom-right-radius:5px ;
+        }
+        input[type=submit] {
+                       
+            background: none;
+            border: 0;
         }
     </style>
 	
@@ -35,7 +40,7 @@
                 <?php echo form_error('password','<p class="help-block">','</p>'); ?>
             </div><br>
             <div class="send-button btn btn-lg btn-primary btn-block">
-                <input type="submit" name="loginSubmit" value="Giriş Yapınız">
+                <input type="submit" name="loginSubmit"  value="Giriş Yapınız" >
             </div>           
         </form>
         <p>Hesabınız yok mu?<a href="<?php echo base_url('users/registration'); ?>">Kayıt Ol</a></p>
