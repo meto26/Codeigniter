@@ -12,13 +12,14 @@
         <h1>Blog Düzenle</h1>
           <div class="col-md-6 offset-md-3">
           <form action="<?php echo site_url('blog/update');?>" method="post">
+          <input type="hidden" name="id" value="<?php echo $blog->id ?>">
             <div class="form-group">
               <label>Başlık</label>
               <input type="text" class="form-control" value="<?php echo $blog->title; ?>" name="title" placeholder="Başlık">
             </div>
             <div class="form-group">
               <label>İçerik</label>
-              <textarea name="text"  class="form-control" cols="30" rows="10"><?php echo $blog->title; ?></textarea>
+              <textarea name="text"  class="form-control" cols="30" rows="10"><?php echo $blog->text; ?></textarea>
             </div>
         
             <div class="form-group">

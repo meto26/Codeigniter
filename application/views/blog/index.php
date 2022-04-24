@@ -16,7 +16,7 @@
             <th scope="col">Id</th>
             <th scope="col">Başlık</th>
             <th scope="col">Kategori Adı</th>
-            <th scope="col">Ekleyen</th>
+            <th scope="col">Ekleyen</th>            
             <th scope="col">Eylem</th>
           </tr>
         </thead>
@@ -29,7 +29,7 @@
             <th scope="row"><?php echo $count;?></th>
             <td><?php echo $row->title;?></td>
             <td><?php echo $row->category_title;?></td>
-            <td><?php echo $row->author_firstname.' '.$row->author_lastname;?></td>
+            <td><?php echo $row->author_firstname.' '.$row->author_lastname;?></td>            
             <td>
               <a href="<?php echo site_url('blog/update/'.$row->id);?>" class="btn btn-sm btn-primary">Düzenle</a>
               <a href="<?php echo site_url('blog/delete/'.$row->id);?>" class="btn btn-sm btn-danger">Sil</a>    

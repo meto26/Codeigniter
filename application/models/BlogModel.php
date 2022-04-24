@@ -2,8 +2,6 @@
 class BlogModel extends CI_Model{
  
   function get_blogs(){
-
-
     $result = $this->db->select('t1.*, t2.title as category_title,t3.first_name as author_firstname, t3.last_name as author_lastname')
      ->from('blog as t1')
      ->join('blog_category as t2', 't1.category_id = t2.id', 'INNER')
@@ -27,7 +25,9 @@ class BlogModel extends CI_Model{
   public function update($data) { 
     extract($data);
     $this->db->where('id', $id);
-    $this->db->update('blog', array('title' => $title));
+
+    $this->db->update('blog', array('title' => $title,'text'=>$text,'category_id'=>$category_id));
+    
     return true;
   }
 

@@ -7,7 +7,7 @@ class Blog  extends CI_Controller {
         parent::__construct(); 
          
       
-       // $this->load->library('form_validation'); 
+       
         $this->load->model('BlogModel'); 
         $this->load->model('BlogCategoryModel'); 
         $this->isUserLoggedIn = $this->session->userdata('isUserLoggedIn'); 
@@ -58,14 +58,15 @@ class Blog  extends CI_Controller {
         if($this->input->post('blogSubmit')){ 
             $data = array(
                 'id' => $this->input->post('id'),
-                'title' => $this->input->post('title')
+                'title' => $this->input->post('title'),
+                'category_id' => $this->input->post('category_id'),
+                'text' => $this->input->post('text')
             );
             $this->BlogModel->update($data);
+        
             redirect('blog');
         }
-
-        $id = $this->uri->segment(3);
-      
+        $id = $this->uri->segment(3);      
 
         $data['blog'] = $this->BlogModel->get_blog($id);
         $data['categories'] = $this->BlogCategoryModel->get_categories();
